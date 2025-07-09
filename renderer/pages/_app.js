@@ -1,6 +1,5 @@
 // pages/_app.js
 import '../style/globals.css';
-// pages/_app.js
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
