@@ -2,7 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import CustomerForm from "../components/customerForm";
 import ProductForm from "../components/productForm";
-import SummaryBox from "../components/SummaryBox";
+import SummaryBox from "../components/summaryBox";
 import ChallanTypeSelector from "../components/ChallanTypeSelector";
 import { db } from "../firebase/firebaseConfig";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
