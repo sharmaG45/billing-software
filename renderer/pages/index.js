@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import CustomerForm from "../components/CustomerForm";
+import CustomerForm from "../components/customerForm";
 import ProductForm from "../components/productForm";
 import SummaryBox from "../components/SummaryBox";
 import ChallanTypeSelector from "../components/ChallanTypeSelector";
@@ -154,8 +154,7 @@ export default function Dashboard() {
       <p>Email: ${shopDetails.email}</p>
       <p>Phone: ${shopDetails.phone}</p>
     </div>
-    ${
-      challanType === "Delivery Challan"
+    ${challanType === "Delivery Challan"
         ? ""
         : `<div class="customer-details">
             <p><strong>Customer Details</strong></p>
@@ -163,7 +162,7 @@ export default function Dashboard() {
             <p>Email: ${customer.email || "-"}</p>
             <p>Phone: ${customer.phone || "-"}</p>
           </div>`
-    }
+      }
   </div>
 
   <div class="invoice-info">
@@ -172,12 +171,11 @@ export default function Dashboard() {
     <div>Date: ${new Date().toLocaleString()}</div>
   </div>
 
-  ${
-    challanType === "Delivery Challan"
-      ? `<p><strong>Driver Name:</strong> ${driverDetails.name}</p>
+  ${challanType === "Delivery Challan"
+        ? `<p><strong>Driver Name:</strong> ${driverDetails.name}</p>
          <p><strong>Licence No:</strong> ${driverDetails.licence}</p>
          <p><strong>Vehicle No:</strong> ${driverDetails.vehicle}</p>`
-      : `
+        : `
         <table>
           <thead>
             <tr>
@@ -190,12 +188,11 @@ export default function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            ${
-              products.length === 0
-                ? `<tr><td colspan="6">No products added</td></tr>`
-                : products
-                    .map(
-                      (p, i) => `
+            ${products.length === 0
+          ? `<tr><td colspan="6">No products added</td></tr>`
+          : products
+            .map(
+              (p, i) => `
               <tr>
                 <td>${i + 1}</td>
                 <td>${p.name}</td>
@@ -205,9 +202,9 @@ export default function Dashboard() {
                 <td>${(p.qty * p.price).toFixed(2)}</td>
               </tr>
             `
-                    )
-                    .join("")
-            }
+            )
+            .join("")
+        }
           </tbody>
         </table>
 
@@ -235,14 +232,13 @@ export default function Dashboard() {
                 <td style="text-align: right;"><strong>Discount (${discount}%):</strong></td>
                 <td style="text-align: right;">₹${totals.discountAmount.toFixed(2)}</td>
               </tr>
-              ${
-                challanType === "Tax Invoice"
-                  ? `<tr>
+              ${challanType === "Tax Invoice"
+          ? `<tr>
                       <td style="text-align: right;"><strong>GST (${gst}%):</strong></td>
                       <td style="text-align: right;">₹${totals.gstAmount.toFixed(2)}</td>
                     </tr>`
-                  : ""
-              }
+          : ""
+        }
               <tr>
                 <td style="text-align: right;"><strong>Grand Total:</strong></td>
                 <td style="text-align: right;"><strong>₹${totals.total.toFixed(2)}</strong></td>
@@ -251,7 +247,7 @@ export default function Dashboard() {
           </div>
         </div>
       `
-  }
+      }
 
   <div class="signature-stamp">
     <div class="signature">
@@ -306,9 +302,8 @@ export default function Dashboard() {
                 {menuItems.map((item) => (
                   <li key={item.key} className="nav-item">
                     <button
-                      className={`nav-link btn btn-link w-100 text-start ${
-                        activeSection === item.key ? "active fw-bold text-primary" : "text-secondary"
-                      }`}
+                      className={`nav-link btn btn-link w-100 text-start ${activeSection === item.key ? "active fw-bold text-primary" : "text-secondary"
+                        }`}
                       onClick={() => setActiveSection(item.key)}
                       style={{ textDecoration: "none" }}
                     >
