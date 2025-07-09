@@ -6,7 +6,7 @@
   "main": "main/main.js",
   "scripts": {
     "dev": "cd renderer && npx next dev --port 3000",
-    "build:next": "cd renderer && npx next build && npx next export",
+    "build:next": "cd renderer && npx next build",
     "build": "npm run build:next && electron-builder",
     "start": "electron .",
     "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\""
