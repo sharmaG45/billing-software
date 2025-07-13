@@ -9,15 +9,15 @@ export default function Footer() {
           {/* Column 1 */}
           <div className="col-md-4 mb-4">
             <img
-              src="/logo/kodnxt-logo.png" // Replace with your logo path
+              src="/logos/kodnxt-logo.png" // Replace with your logo path
               alt="Company Logo"
               style={{ height: "60px" }}
               className="mb-2"
             />
-            <h5 className="mb-2">KodNxt AdTech</h5>
+            {/* <h5 className="mb-2">KodNxt AdTech</h5>
             <p className="small text-muted">
               We are committed to delivering the best products and services with a focus on quality and customer satisfaction.
-            </p>
+            </p> */}
 
             
           </div>

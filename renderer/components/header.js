@@ -8,7 +8,7 @@ export default function Header() {
           {/* Logo on the left */}
           <a className="navbar-brand d-flex align-items-center" href="/">
             <img
-              src="/logo/kodnxt-logo.png"
+              src="/logos/kodnxt-logo.png"
               alt="Company Logo"
               className="img-fluid"
               style={{ height: "70px", objectFit: "contain" }}
