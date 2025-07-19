@@ -118,10 +118,10 @@ export default function Dashboard() {
 
     const shopDetails = {
       name: "Paudhawala Nursery",
-      address: "Near By Reesabh Automobile, Jadhua, NH-19 Hajipur, Bihar",
+      address: "Near By Reesabh Automobile, Jadhua Bagtola, NH-19 Hajipur, Vaishali, Bihar, 844101",
       email: "support@paudhwala.com",
       phone: "+91-9955859697",
-      gstin: "27ABCDE1234F2Z5",
+      gstin: "10CMNPK4148L2ZV",
     };
 
     const content = `
